@@ -56,6 +56,7 @@ func main() {
 
 		// Membaca response dari POST request
 		body, _ := io.ReadAll(resp.Body)
+		fmt.Println("=============output=============")
 		fmt.Println("POST Response:", string(body))
 
 		// Mendapatkan status water dan wind berdasarkan nilai yang dihasilkan
@@ -65,6 +66,7 @@ func main() {
 		// Menampilkan status water dan wind
 		fmt.Printf("status water : %s\n", waterStatus)
 		fmt.Printf("status wind : %s\n", windStatus)
+		fmt.Println("================================")
 
 		// Tunggu 15 detik sebelum melanjutkan loop
 		time.Sleep(15 * time.Second)
